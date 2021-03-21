@@ -1,0 +1,6 @@
+flask
+requests
+jsonpickle
+pymysql
+pyyaml
+pypika
