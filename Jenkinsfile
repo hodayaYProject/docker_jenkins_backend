@@ -15,13 +15,13 @@ pipeline {
         git 'https://github.com/hodayaYProject/docker_jenkins_backend.git'
       }
     }
-    stage('run backend'){
-      steps{
-        bat 'start /min python r_app.py'
-        bat 'python backend_testing.py'
-        bat 'python clean_environment.py'
-      }
-    }
+//     stage('run backend'){
+//       steps{
+//         bat 'start /min python r_app.py'
+//         bat 'python backend_testing.py'
+//         bat 'python clean_environment.py'
+//       }
+//     }
     stage('Building image') {
       steps{
         script {
