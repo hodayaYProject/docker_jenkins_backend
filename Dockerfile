@@ -1,7 +1,7 @@
 FROM python:3.9.1
 RUN mkdir /app
 WORKDIR /app
-COPY . /app/
+COPY . /app
 RUN pip install -r requirements.txt
 EXPOSE 5000
-CMD ["python", "rest_app.py"]
+CMD ["python", "/app/rest_app.py"]
