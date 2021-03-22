@@ -42,7 +42,7 @@ pipeline {
        steps{
          bat "echo IMAGE_TAG=${BUILD_NUMBER} >> .env"
 //          bat "echo IMAGE_TAG=${BUILD_NUMBER} >> .env"
-         bat 'docker-compose up -d'
+         bat 'docker-compose up --build -d'
          bat 'python docker_backend_testing.py'
          bat 'docker-compose down'
 //          bat 'helm install k8s_helm k8s_ –set image.version=”devhodi/docker-test”:${BUILD_NUMBER}'

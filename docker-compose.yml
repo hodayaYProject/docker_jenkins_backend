@@ -7,4 +7,4 @@ services:
 #    volumes:
 #      -.:/app
   redis:
-    image: "devhodi/docker-test:37"
+    image: "devhodi/docker-test:38"
