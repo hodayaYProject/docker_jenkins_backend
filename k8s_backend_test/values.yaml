@@ -1,0 +1,10 @@
+replicaCount: 5
+
+image:
+  test:
+    repository: devhodi/docker-test
+    tag: "latest"
+
+service:
+  type: LoadBalancer
+  internalPort: 5000

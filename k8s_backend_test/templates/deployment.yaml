@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-k8s-deployment
+spec:
+  selector:
+    matchLabels:
+      app: test-k8s-d
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: test-k8s
+    spec:
+      containers:
+      - name: docker-test-k8s
+        image: {{ .Values.image.test.repository }}:{{ .Values.image.test.tag }}
+        ports:
+        - containerPort: 5000
