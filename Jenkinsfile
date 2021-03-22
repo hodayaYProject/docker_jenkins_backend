@@ -40,7 +40,7 @@ pipeline {
     }
      stage('run'){
        steps{
-         echo IMAGE_TAG=${BUILD_NUMBER} > .env
+         echo 'IMAGE_TAG=${BUILD_NUMBER}' > .env
          bat 'docker-compose up -d'
          bat 'python docker_backend_testing.py'
          bat 'docker-compose down'
