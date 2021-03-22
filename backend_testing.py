@@ -1,7 +1,7 @@
 import requests
 
 def rest_post(user_id,user_name):
-    res = requests.post(f'http://127.0.0.1:5000/users/{user_id}', json={"user_name" : user_name})
+    res = requests.post(f'http://localhost:5000/users/{user_id}', json={"user_name" : user_name})
     if res.ok:
         return {'status': 'ok', 'user_add': user_name}
     else:
