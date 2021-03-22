@@ -6,5 +6,5 @@ services:
      - "5000:5000"
 #    volumes:
 #      -.:/app
-  redis:
+  app:
     image: "devhodi/docker-test:${BUILD_NUMBER}"
