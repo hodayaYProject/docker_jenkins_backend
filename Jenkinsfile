@@ -60,6 +60,6 @@ pipeline {
 //           bat 'python k8s_backend_testing.py'
 //           bat 'helm delete k8s_helm'
 //         }
-    }
+//     }
   }
 }
