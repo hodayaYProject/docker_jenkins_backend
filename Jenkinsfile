@@ -1,6 +1,7 @@
 pipeline {
   environment {
     registry = "devhodi/docker-test"
+    registry = "devhodi/dockerTest"
     registryCredential = 'docker_hub'
     dockerImage = ''
   }
@@ -51,14 +52,14 @@ pipeline {
         bat "docker rmi $registry:$BUILD_NUMBER"
       }
     }
-    stage('run helm k8s'){
-        steps{
+//     stage('run helm k8s'){
+//         steps{
 //           bat 'helm install k8s_helm k8s_backend_test --set image.version="devhodi/docker-test:2"'
-          bat 'helm install k8s_helm k8s_backend_test --set image.version="devhodi/docker-test:${BUILD_NUMBER}"'
-          bat 'minikube service k8s_helm --url > k8s_url.txt'
+//           bat 'helm install k8s_helm k8s_backend_test --set image.version="devhodi/dockerTest:${BUILD_NUMBER}"'
+//           bat 'minikube service k8s_helm --url > k8s_url.txt'
 //           bat 'python k8s_backend_testing.py'
-          bat 'helm delete k8s_helm'
-        }
+//           bat 'helm delete k8s_helm'
+//         }
     }
   }
 }
