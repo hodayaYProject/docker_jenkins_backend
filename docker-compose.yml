@@ -7,4 +7,4 @@ services:
 #    volumes:
 #      -.:/app
   app:
-    image: "devhodi/dockertest:${BUILD_NUMBER}"
+    image: "devhodi/docker-test:${BUILD_NUMBER}"

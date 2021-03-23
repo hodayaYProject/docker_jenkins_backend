@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: test-k8s-d
+      app: test-k8s-deployment
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-        app: test-k8s
+        app: test-k8s-deployment
     spec:
       containers:
       - name: docker-test-k8s
