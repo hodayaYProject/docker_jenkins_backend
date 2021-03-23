@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "devhodi/docker-test"
-    registry = "devhodi/dockerTest"
+    registry = "devhodi/dockertest"
     registryCredential = 'docker_hub'
     dockerImage = ''
   }

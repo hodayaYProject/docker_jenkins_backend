@@ -2,7 +2,7 @@ replicaCount: 5
 
 image:
   test:
-    repository: devhodi/dockerTest
+    repository: devhodi/dockertest
     tag: "latest"
 
 service:
