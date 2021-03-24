@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: test-k8s-service
 spec:
+  selector:
+    app: test-k8s-deployment
   type: {{ .Values.service.type }}
   ports:
     - port: 80
