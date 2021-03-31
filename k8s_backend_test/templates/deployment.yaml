@@ -17,19 +17,19 @@ spec:
         image: {{ .Values.image.test.repository }}:{{ .Values.image.test.tag }}
         ports:
         - containerPort: 5000
-      env:
-        - name: DB_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret
-              key: username
-        - name: DB_PASSWORD
+        env:
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secret
+                key: username
+          - name: DB_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: mysql-secret
                 key: password
-        - name: DB_HOST
+          - name: DB_HOST
             valueFrom:
               configMapKeyRef:
                 name: mysql-configmap
-                db_host: password
+                keys: db_host
