@@ -32,4 +32,4 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: mysql-configmap
-                keys: db_host
+                key: db_host
